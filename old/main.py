@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 import pygame
-from old.player import Player
+from player import Player
 from food import Food
 from elien import Alien
 import random
@@ -68,7 +68,7 @@ while running == True:
     egg.draw(screen)
 =======
 import pygame
-from old.player import Player
+from player import Player
 from food import Food
 from elien import Alien
 import random

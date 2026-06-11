@@ -1,5 +1,5 @@
 import pygame
-from old.player import Player
+from player import Player
 
 WIDTH = 1024
 HEIGHT = 640
