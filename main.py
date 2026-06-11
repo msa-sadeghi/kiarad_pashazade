@@ -15,6 +15,8 @@ FPS = 60
 running = True
 while running == True:
     dt = CLOCK.tick(FPS) / 1000
+
+   
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
