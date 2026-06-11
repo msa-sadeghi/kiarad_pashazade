@@ -1,17 +1,26 @@
 import pygame
-
+from old.player import Player
 
 WIDTH = 1024
 HEIGHT = 640
 
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
+p = Player()
 
-PAGE = pygame.display.set_mode((WIDTH,HEIGHT))
+
+bg = pygame.image.load("BG.png")
+bg = pygame.transform.scale(bg, (WIDTH, HEIGHT))
+CLOCK = pygame.time.Clock()
+FPS = 60
 running = True
-while running == True :
+while running == True:
     for event in pygame.event.get():
-        if event.type == pygame.QUIT :
+        if event.type == pygame.QUIT:
             running = False
-        
 
-    PAGE.fill("pink")
+    screen.blit(bg, (0, 0))
+    p.draw(screen)
+    p.go()
+    p.animation()
     pygame.display.update()
+    CLOCK.tick(FPS)
