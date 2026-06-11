@@ -14,13 +14,13 @@ CLOCK = pygame.time.Clock()
 FPS = 60
 running = True
 while running == True:
+    dt = CLOCK.tick(FPS) / 1000
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
 
     screen.blit(bg, (0, 0))
     p.draw(screen)
-    p.go()
+    p.go(dt)
     p.animation()
     pygame.display.update()
-    CLOCK.tick(FPS)
