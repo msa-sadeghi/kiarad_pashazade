@@ -1,28 +1,31 @@
 import pygame
-from player import Player
+import os
 
 WIDTH = 1024
 HEIGHT = 640
 
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-p = Player()
+
+ASSETS_PATH = "robot"
 
 
-bg = pygame.image.load("BG.png")
-bg = pygame.transform.scale(bg, (WIDTH, HEIGHT))
-CLOCK = pygame.time.Clock()
-FPS = 60
+def load_frames(folder_name):
+    path = os.path.join(ASSETS_PATH, folder_name)
+    frames = []
+    files = sorted(os.listdir(path))
+    print(files)
+
+load_frames("Dead")
+
+
+bg_image = pygame.image.load("BG.png")
+bg_image = pygame.transform.scale(bg_image, (WIDTH, HEIGHT))
 running = True
-while running == True:
-    dt = CLOCK.tick(FPS) / 1000
 
-   
+while running == True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-
-    screen.blit(bg, (0, 0))
-    p.draw(screen)
-    p.go(dt)
-    p.animation()
+    # screen.fill("lightgreen")
+    screen.blit(bg_image, (0, 0))
     pygame.display.update()
