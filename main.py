@@ -13,7 +13,8 @@ def load_frames(folder_name):
     path = os.path.join(ASSETS_PATH, folder_name)
     frames = []
     files = sorted(os.listdir(path))
-    print(files)
+    for f in files:
+        img = pygame.image.load()
 
 load_frames("Dead")
 
