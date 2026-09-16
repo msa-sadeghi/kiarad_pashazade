@@ -1,0 +1,19 @@
+h1 {
+  color: #f66464;
+}
+
+p {
+  border: 5px dotted greenyellow;
+  padding: 30px;
+  border-radius: 30px;
+}
+
+table {
+  margin: 20px 0;
+  width: 100%;
+  text-align: center;
+}
+
+tr {
+  background-color: #f66464;
+}
