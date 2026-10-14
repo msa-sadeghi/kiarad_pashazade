@@ -4,61 +4,47 @@
   margin: 0;
   direction: rtl;
 }
-
-nav {
+@font-face {
+  font-family: vazir;
+  src: url(Vazir-Regular.ttf);
+}
+div.container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  background-color: #e87e92;
+  margin: 10px auto;
 }
-.links {
+div.container .search-section,
+div.container .login-section {
   display: flex;
-  gap: 20px;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
 }
 
-a {
-  text-decoration: none;
-  color: white;
+div.container .login-section {
+  padding: 0 30px;
 }
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.card {
-  border: 3px solid black;
-  padding: 30px;
-  margin: 10px;
-  border-radius: 15px;
-  min-width: 300px;
-}
-.card img {
-  width: 100%;
-  height: auto;
-}
-@media screen and (max-width: 600px) {
-  main {
-    flex-direction: column;
-  }
-}
-
-table {
-  width: 100%;
-  border: 1px solid red;
-}
-table tr {
-  background-color: gray;
-}
-table tr th {
-  font-weight: bold;
-  font-size: 24px;
-  background-color: #e87e92;
-  border: 2px solid black;
-}
-table tr td {
-  background-color: #d7b6bc;
-  border: 2px solid black;
-  text-align: center;
+div.container .login-section button {
+  border: none;
   border-radius: 12px;
+  background-color: #efefef;
+  padding: 10px 30px;
+  font-family: vazir;
+  cursor: pointer;
+}
+div.container .search-section i {
+  position: absolute;
+  right: 40px;
+}
+div.container .search-section input {
+  padding: 10px 60px;
+  border-radius: 12px;
+  border: none;
+  background-color: #efefef;
+  font-family: vazir;
+}
+div.container .search-section input::placeholder {
+  color: blue;
+  padding: 0 30px;
+  font-family: vazir;
 }
